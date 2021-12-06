@@ -1,0 +1,151 @@
+<div class="container">
+
+  <div class="headerWrapper">
+    <div class="nameWrapper">
+      <p class="name">Stitch Line</p>
+    </div>
+  </div>
+
+  <div class="contentWrapper">
+
+    <div class="content1">
+
+      <div class="createOuter">
+
+        <div class="createHeader">
+          <div class="createNameWrapper">
+            <p class="createName">Save Program</p>
+          </div>
+        </div>
+
+        <div class="createContent">
+
+          <div class="formWrapper">
+            <form class="formContent" [formGroup]="createForm">
+
+              <mat-form-field class="fields">
+                <mat-label>Program ID</mat-label>
+                <input type="text" matInput formControlName="pid">
+                <mat-error *ngIf="createForm.get('pid')?.touched && createForm.get('pid')?.invalid">
+                  Please enter a valid ID
+                </mat-error>
+              </mat-form-field>
+
+              <mat-form-field class="fields">
+                <mat-label>Name</mat-label>
+                <input type="text" matInput formControlName="name">
+                <mat-error *ngIf="createForm.get('name')?.touched && createForm.get('name')?.invalid">
+                  Please enter a valid name
+                </mat-error>
+              </mat-form-field>
+
+              <mat-form-field class="fields">
+                <mat-label>Start Date</mat-label>
+                <input type="date" matInput formControlName="start_date"
+                >
+                <mat-error *ngIf="createForm.get('start_date')?.touched && createForm.get('start_date')?.invalid">
+                  Please select a Starting date
+                </mat-error>
+              </mat-form-field>
+
+              <mat-form-field class="fields">
+                <mat-label>End Date</mat-label>
+                <input type="date" matInput formControlName="end_date"
+                >
+                <mat-error *ngIf="createForm.get('end_date')?.touched && createForm.get('end_date')?.invalid">
+                  Please select a end date
+                </mat-error>
+              </mat-form-field>
+
+              <mat-form-field class="fields">
+                <mat-label>Description</mat-label>
+                <textarea type="text" matInput (resize)="false" rows="5" formControlName="description"></textarea>
+                <mat-error *ngIf="createForm.get('description')?.touched && createForm.get('description')?.invalid">
+                  Please enter a description
+                </mat-error>
+              </mat-form-field>
+
+            </form>
+          </div>
+          <div class="buttonWrapper">
+            <button [disabled]="createForm.invalid" mat-raised-button class="createProgram" (click)="saveProgram()">Save</button>
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="updateOuter">
+
+        <div class="createHeader">
+          <div class="createNameWrapper">
+            <p class="createName">Update Program</p>
+          </div>
+        </div>
+
+        <div class="createContent">
+
+          <div class="formWrapper">
+            <form class="formContent" [formGroup]="updateForm">
+
+              <mat-form-field class="fields">
+                <mat-label>Program ID</mat-label>
+                <input type="text" matInput formControlName="pid">
+                <mat-error *ngIf="updateForm.get('pid')?.touched && updateForm.get('pid')?.invalid">
+                  Please enter a valid ID
+                </mat-error>
+              </mat-form-field>
+
+              <mat-form-field class="fields">
+                <mat-label>Name</mat-label>
+                <input type="text" matInput formControlName="name">
+                <mat-error *ngIf="updateForm.get('name')?.touched && updateForm.get('name')?.invalid">
+                  Please enter a valid name
+                </mat-error>
+              </mat-form-field>
+
+              <mat-form-field class="fields">
+                <mat-label>Start Date</mat-label>
+                <input type="date" matInput formControlName="start_date"
+                >
+                <mat-error *ngIf="updateForm.get('start_date')?.touched && updateForm.get('start_date')?.invalid">
+                  Please select a Starting date
+                </mat-error>
+              </mat-form-field>
+
+              <mat-form-field class="fields">
+                <mat-label>End Date</mat-label>
+                <input type="date" matInput formControlName="end_date"
+                >
+                <mat-error *ngIf="updateForm.get('end_date')?.touched && updateForm.get('end_date')?.invalid">
+                  Please select a end date
+                </mat-error>
+              </mat-form-field>
+
+              <mat-form-field class="fields">
+                <mat-label>Description</mat-label>
+                <textarea type="text" matInput rows="5" formControlName="description"></textarea>
+                <mat-error *ngIf="updateForm.get('description')?.touched && updateForm.get('description')?.invalid">
+                  Please enter a description
+                </mat-error>
+              </mat-form-field>
+
+            </form>
+          </div>
+          <div class="buttonWrapper">
+            <button [disabled]="updateForm.invalid" mat-raised-button class="createProgram" (click)="updateProgram()">Update</button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="content2">
+
+    </div>
+
+  </div>
+
+</div>

@@ -1,0 +1,33 @@
+<div id="loginWrapper">
+  <div class="outer">
+    <div id="nameWrapper">
+      <p id="name">Stitch Line</p>
+    </div>
+    <div id="formWrapper">
+      <form class="formContent" [formGroup]="loginForm">
+
+        <mat-form-field id="field1">
+          <mat-label>Username</mat-label>
+          <input type="text" matInput formControlName="username">
+          <mat-error *ngIf="loginForm.get('username')?.touched && loginForm.get('username')?.invalid">
+            Please enter a valid Username
+          </mat-error>
+        </mat-form-field>
+
+        <mat-form-field id="field2">
+          <mat-label>Password</mat-label>
+          <input type="password" matInput formControlName="password">
+          <mat-error *ngIf="loginForm.get('password')?.touched && loginForm.get('password')?.invalid">
+            Please enter a valid Password
+          </mat-error>
+        </mat-form-field>
+      </form>
+    </div>
+    <div id="buttonWrapper">
+      <button [disabled]="loginForm.invalid" mat-raised-button class="sign-in-button" (click)="login()">Sign in</button>
+    </div>
+    <div id="registerWrapper">
+      <p id="register">New to Stitch Line ? <a href="" routerLink="/auth/signUp">Register</a></p>
+    </div>
+  </div>
+</div>

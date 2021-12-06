@@ -1,0 +1,124 @@
+.container{
+  width: 100%;
+  height: 100%;
+  background-color: #D9E4EC;
+  display: flex;
+  flex-direction: column;
+}
+
+.headerWrapper{
+  width: 100%;
+  height: 8%;
+  background-color: #385E72;
+  display: flex;
+  flex-direction: row;
+}
+
+.nameWrapper{
+  width: 20%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fcf8e3;
+}
+
+.name{
+  font-size: 2rem;
+  width: max-content;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.contentWrapper{
+  width: 100%;
+  height: 92%;
+  background-color: #E7EDEB;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.content1{
+  width: 95%;
+  height: 50%;
+  background-color: #fcf8e3;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.createOuter{
+  width: 48%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.createHeader{
+  width: 100%;
+  height: 12%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.createNameWrapper{
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #6AABD2;
+}
+
+.createName{
+  font-size: 1.5rem;
+  width: max-content;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+.createContent{
+  width: 100%;
+  height: 88%;
+  display: flex;
+  flex-direction: row;
+}
+
+.formWrapper{
+  width: 70%;
+  height: 100%;
+}
+
+.buttonWrapper{
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.createProgram {
+  width: 80%;
+  margin-bottom: 20px;
+}
+
+.fields{
+  margin: 10px 20px;
+}
+
+.updateOuter{
+  width: 48%;
+  height: 100%;
+}
+
+.content2{
+  width: 95%;
+  height: 37%;
+}
+
+textarea{
+  resize: none !important;
+}
